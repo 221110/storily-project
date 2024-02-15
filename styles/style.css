@@ -38,7 +38,7 @@ nav {
 
 .navbar {
     display: grid;
-    grid-template-columns: 1fr 3fr;
+    grid-template-columns: 1fr 2fr 1fr;
     align-items: center;
 }
 
@@ -48,10 +48,23 @@ nav {
 
 .navbar-link {
     display: flex;
-    justify-content: end;
+    justify-content: center;
     column-gap: 34px;
     list-style-type: none;
     color: #000;
+}
+
+.navbar-social-media {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    column-gap: 24px;
+    list-style-type: none;
+}
+
+.navbar-social-media-item svg{
+    width: 24px;
+    height: 24px;
 }
 
 #home {
@@ -149,6 +162,7 @@ nav {
 
 #our-team {
     padding-top: 120px;
+    padding-bottom: 80px;
 }
 
 .our-team {
@@ -200,4 +214,80 @@ nav {
 
 .our-team-card-info {
     padding: 16px;
+}
+
+footer {
+    padding-top: 80px;
+    padding-bottom: 20px;
+    background-color: #005A9C;
+}
+
+.footer-title h1, 
+.footer-title p {
+    font-size: 48px;
+    color: #fff;
+}
+
+.footer-title p {
+    text-decoration: underline;
+    margin-bottom: 48px;
+}
+
+.footer {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: flex-end;
+    margin-bottom: 64px;
+}
+
+.footer-info p {
+    font-size: 20px;
+    margin-bottom: 8px;
+    color: #fff;
+}
+
+.footer-info span {
+    display: block;
+    max-width: 380px;
+    font-size: 16px;
+    color: #fff;
+}
+
+.footer-social-media {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    column-gap: 48px;
+    list-style-type: none;
+}
+
+.footer-social-media-item a {
+    display: flex;
+    align-items: center;
+    column-gap: 12px;
+    color: #fff;
+}
+
+.footer-social-media-item p {
+    transition: .5s;
+    font-weight: 600;
+}
+
+.footer-social-media-item svg {
+    width: 24px;
+    height: 24px;
+    fill: #fff;
+    transition: .5s;
+}
+
+.footer-social-media-item:hover p,
+.footer-social-media-item:hover svg {
+    color: #FBCEB1;
+    fill: #FBCEB1;
+}
+
+.footer-credits {
+    font-size: 16px;
+    color: #fff;
+    text-align: center;
 }
