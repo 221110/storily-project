@@ -100,7 +100,7 @@ nav {
 
 #home {
     position: relative;
-    height: 100vh;
+    height: 100dvh;
     background: url('../assets/55555.jpg') no-repeat;
     background-size: cover;
     background-position: 0 -200px;
@@ -457,7 +457,7 @@ footer {
 
 @media (max-width: 567px) {
     .home {
-        padding-top: calc(70%); 
+        padding-top: calc(60%); 
     }
     .about-us-info p {
         font-size: 16px;
