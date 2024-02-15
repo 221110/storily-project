@@ -1,0 +1,203 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+*, *::after, 
+*::before {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto';
+    font-style: normal;
+}
+
+.container {
+    max-width: 1240px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+a {
+    text-decoration: none;
+    color: #000;
+}
+
+nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 100;
+    background-color: #fff;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+}
+
+.navbar {
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    align-items: center;
+}
+
+.navbar-logo img  {
+    width: 80px;
+}
+
+.navbar-link {
+    display: flex;
+    justify-content: end;
+    column-gap: 34px;
+    list-style-type: none;
+    color: #000;
+}
+
+#home {
+    height: 100vh;
+    background: url('../assets/55555.jpg') no-repeat;
+    background-size: cover;
+    background-position: 0 -200px;
+}
+
+#home::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    background-color: rgba(0, 0, 0, .4);
+}
+
+.home {
+    padding-top: calc(20%);
+    max-width: 760px;
+}
+
+.home h1 {
+    position: relative;
+    font-size: 48px;
+    margin-bottom: 20px;
+    color: #fff;
+    z-index: 10;
+}
+
+.home p {
+    position: relative;
+    font-size: 16px;
+    margin-bottom: 50px;
+    color: #fff;
+    z-index: 10;
+}
+
+.home button {
+    position: relative;
+    padding: 10px 30px;
+    font-size: 16px;
+    color: #fff;
+    border: none;
+    background-color: #cc9c32;
+    z-index: 10;
+}
+
+.home-angle {
+    text-align: center;
+}
+
+.home-angle svg {
+    position: relative;
+    z-index: 10;
+    font-size: 10px;
+    background-color: red;
+    fill: #fff;
+    color: #fff;
+    width: 100px;
+    height: 100px;
+}
+
+#about-us {
+    padding-top: 50px;
+}
+
+.about-us {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr;
+    column-gap: 40px;
+    align-items: center;
+}
+
+.about-us-title {
+    font-size: 42px;
+    margin-bottom: 24px;
+}
+
+.about-us-img img{
+    width: 100%;
+    max-height: 450px;
+    object-fit: cover;
+    object-position: 0 0;
+}
+
+.about-us-info p {
+    font-size: 18px;
+    margin-bottom: 24px;
+    line-height: 24px;
+}
+
+#our-team {
+    padding-top: 120px;
+}
+
+.our-team {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 24px;
+}
+
+.our-team-title {
+    font-size: 42px;
+    margin-bottom: 24px;
+}
+
+.our-team-card {
+    border-radius: 8px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.our-team-card-img {
+    position: relative;
+}
+
+.our-team-card-img img {
+    width: 100%;
+    height: 100%;
+    max-height: 380px;
+    object-fit: cover;
+    object-position: 0 0;
+    border-radius: 8px 8px 0 0;
+}
+
+.our-team-card-img-info {
+    position: absolute;
+    left: 25px;
+    bottom: 25px;
+    color: #fff;
+}
+
+.our-team-card-img-info p {
+    font-size: 26px;
+    margin-bottom: 4px;
+}
+
+.our-team-card-img-info span {
+    display: block;
+    font-size: 20px;
+    color: grey;
+}
+
+.our-team-card-info {
+    padding: 16px;
+}
