@@ -3,6 +3,7 @@
 * {
     padding: 0;
     margin: 0;
+    scroll-behavior: smooth;
 }
 
 *, *::after, 
@@ -40,6 +41,7 @@ nav {
     display: grid;
     grid-template-columns: 1fr 2fr 1fr;
     align-items: center;
+    column-gap: 32px;
 }
 
 .navbar-logo img  {
@@ -51,7 +53,17 @@ nav {
     justify-content: center;
     column-gap: 34px;
     list-style-type: none;
-    color: #000;
+    color: #005A9C;
+}
+
+.navbar-link-item a {
+    font-weight: 500;
+    transition: .5s ease;
+    color: #005A9C;
+}
+
+.navbar-link-item:hover a{
+    color: #FBCEB1;
 }
 
 .navbar-social-media {
@@ -65,7 +77,26 @@ nav {
 .navbar-social-media-item svg{
     width: 24px;
     height: 24px;
+    fill: #005A9C;
+    transition: .5s ease;
 }
+
+.navbar-social-media-item a {
+    font-weight: 500;
+    transition: .5s ease;
+    color: #005A9C;
+}
+
+.navbar-social-media-item.hamburger {
+    display: none;
+}
+
+.navbar-social-media-item:hover svg,
+.navbar-social-media-item:hover a{
+    color: #FBCEB1;
+    fill: #FBCEB1;
+}
+
 
 #home {
     height: 100vh;
@@ -106,33 +137,20 @@ nav {
     z-index: 10;
 }
 
-.home button {
+.home a {
+    display: inline-block;
     position: relative;
     padding: 10px 30px;
     font-size: 16px;
     color: #fff;
     border: none;
     background-color: #cc9c32;
+    cursor: pointer;
     z-index: 10;
-}
-
-.home-angle {
-    text-align: center;
-}
-
-.home-angle svg {
-    position: relative;
-    z-index: 10;
-    font-size: 10px;
-    background-color: red;
-    fill: #fff;
-    color: #fff;
-    width: 100px;
-    height: 100px;
 }
 
 #about-us {
-    padding-top: 50px;
+    padding-top: 100px;
 }
 
 .about-us {
@@ -290,4 +308,140 @@ footer {
     font-size: 16px;
     color: #fff;
     text-align: center;
+}
+
+/* Responsive */
+@media (max-width: 1300px) {
+    #home {
+        background-position: 0 0;
+    }
+}
+@media (max-width: 1000px) {
+    #home {
+        background-position: center 0;
+    }
+    .home {
+        padding-top: calc(30%);
+    }
+
+    .about-us {
+        grid-template-columns: 1fr;
+        row-gap: 24px;
+    }
+}
+
+@media (max-width: 920px) {
+    .navbar {
+        grid-template-columns: 1fr 1fr;
+    }
+    .navbar-link {
+        position: fixed;
+        top: 0;
+        right: -100%;
+        width: 70%;
+        height: 100%;
+        align-items: center;
+        flex-direction: column;
+        background-color: #fff;
+        transition: 0.5s ease-in-out;
+    }
+    .navbar-link-item {
+        width: 100%;
+        text-align: center;
+        padding: 20px 0;
+    }
+    .navbar-link-item:hover:not(.close) {
+        background-color: #FBCEB1;
+    }
+    .navbar-link-item:hover a {
+        color: #005A9C;
+    }
+    .navbar-social-media-item.phone-number {
+        display: none;
+    }
+    .navbar-link-item.close {
+        display: block;
+        position: absolute;
+        top: 24px;
+        right: 24px;
+        width: 24px;
+        height: 24px;
+    }
+    .close {
+        fill: #005A9C;
+    }
+    .navbar-social-media-item.hamburger {
+        display: block;
+        cursor: pointer;
+    }
+    .our-team {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .footer {
+        grid-template-columns: 1fr;
+        row-gap: 24px;
+    }
+
+    .footer-social-media {
+        justify-content: flex-start;
+    }
+}
+@media (max-width: 768px) {
+    .home {
+        padding-top: calc(40% + 80px);
+    }   
+    .home h1 {
+        font-size: 32px;
+    }
+    .home p {
+        font-size: 16px;
+        margin-bottom: 32px;
+    }
+    .our-team-card-img-info {
+        left: 16px;
+        bottom: 16px;
+    }
+    .our-team-card-img-info p{
+        font-size: 24px;
+    }
+    .our-team-card-img-info span {
+        font-size: 16px;
+    }
+    .our-team-card-info {
+        padding: 14px;
+    }
+    .our-team-card-info p {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 567px) {
+    .home {
+        padding-top: calc(70%); 
+    }
+    .about-us-info p {
+        font-size: 16px;
+        line-height: 24px;
+        margin-bottom: 16px;
+    }
+    #our-team {
+        padding-top: 50px;
+    }
+    .our-team {
+        grid-template-columns: 1fr;
+    }
+    .footer-title h1,
+    .footer-title p {
+        font-size: 32px;
+        text-align: center;
+    }
+    .footer-info {
+        display: none;
+    }
+    .footer-social-media {
+        flex-wrap: wrap;
+        justify-content: center;
+        row-gap: 24px;
+    }
 }
