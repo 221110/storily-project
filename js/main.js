@@ -7,3 +7,9 @@ hamburger.addEventListener('click', () => {
 close.addEventListener('click', () => {
     document.querySelector('.navbar-link').style.right = '-100%';
 })
+
+document.querySelectorAll('.navbar-link-item').forEach(el => {
+    el.addEventListener('click', () => {
+        document.querySelector('.navbar-link').style.right = '-100%';
+    })  
+});
